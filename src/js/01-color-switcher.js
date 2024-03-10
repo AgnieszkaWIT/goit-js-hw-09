@@ -1,5 +1,5 @@
 let timeoutVariable;
-//let counteColorChange = 0;
+//let counterColorChange = 0;
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
@@ -8,8 +8,8 @@ function getRandomHexColor() {
 function changeBackgroundColor() {
   document.body.style.backgroundColor = getRandomHexColor();
   timeoutVariable = setTimeout(changeBackgroundColor, 1000);
-  //counteColorChange += 1;
-  //console.log(counteColorChange);
+  //counterColorChange += 1;
+  //console.log(counterColorChange);
 }
 
 document.querySelector('[data-start]').addEventListener('click', () => {
@@ -22,5 +22,5 @@ document.querySelector('[data-stop]').addEventListener('click', () => {
   document.querySelector('[data-stop]').disabled = true;
   document.querySelector('[data-start]').disabled = false;
   clearTimeout(timeoutVariable);
-  //counteColorChange = 0;
+  //counterColorChange = 0;
 });
